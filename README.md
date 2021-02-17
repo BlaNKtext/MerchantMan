@@ -1,2 +1,2 @@
 # MerchantMan
-Created with CodeSandbox
+A text based RPG game that runs in your browser
