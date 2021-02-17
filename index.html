@@ -502,20 +502,23 @@
 			var chance = Math.floor( Math.random() * chance );
 			if (chance == 0){
 				Print_Output( s12+"As you attempt to go about your business, you are stopped by some rather rough looking thugs."+s );
-  			if (Check_Sword());
- 				 }else{
-				if ( player.gold ){
-    			var amount_stolen = Math.ceil( Math.random()*player.gold );
-    			player.gold-=amount_stolen;
-    			Print_Output( "The bandits pat you down for gold, finding "+s14+ amount_stolen +s+" and "+s12+"knock you out cold."+s);
-    			player.health-=2;
-    		if (!Check_Death( "You have been murdered by bandits.")){
-      		Print_Output( "Dusting yourself off after the bandits leave, you find you have "+s14+player.gold+s+" gold remaining.");
-					}else{
- 					 Print_Output("The bandits pat you down for gold but find nothing. They shove you out of the way and disappear back into the shadows.");}
-						}else{
-							Print_Output( s8+"You have the sensation of being watched by unsavory characters, but they decide not to bother you."+s );
-							}
+				if ( player.sword ){
+					(Check_Cbs());
+					player.health-=2;
+					if (!Check_Death( "You have been murdered by bandits.")){
+						Print_Output( "Dusting yourself off after the bandits leave, you find you have "+s14+player.gold+s+" gold remaining.");
+					if ( player.gold ){
+					var amount_stolen = Math.ceil( Math.random()*player.gold );
+					player.gold-=amount_stolen;
+					Print_Output( "The bandits pat you down for gold, finding "+s14+ amount_stolen +s+" and "+s12+"knock you out cold."+s);
+					}
+				}else{
+					Print_Output("The bandits pat you down for gold but find nothing. They shove you out of the way and disappear back into the shadows.");
+				}
+			}else{
+				Print_Output( s8+"You have the sensation of being watched by unsavory characters, but they decide not to bother you."+s );
+			}
+		}
 		
 		function Check_Death( cause ){
 			if (player.health <= 0){
@@ -526,7 +529,7 @@
 			return false;
 		}
 
-		function Check_Sword( cause ){
+		function Check_Cbs( cause ){
 			if (player.sword <= 1){
 				Print_Output("You faught off the dirty bandits with the legendary cock and ball greatsword. (You couldn't even lift it but as soon as you started to draw it, they ran)");
 				return true;
