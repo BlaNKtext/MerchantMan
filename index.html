@@ -469,26 +469,6 @@
 							}
 						}
 					}
-				},
-				{	//ROOM #13
-					"room_name" : "The Cock and Ball Crypts",
-					"room_desc" : "The final resting place of Lord Fatcock the Flaccid, as well as his sword, you should "+sh+"SEARCH"+s+" for it here",
-					"choices"	: {
-						"SEARCH": function(){
-							Print_Output("You start looking around in every nook and cranny, but to no avail. You decide the journey was a bust and start for the door, but a silvery shine catches your eye, " +
-							"theres a tiny shine coming from under some dirt, you walk over to investigate and "+sh+"DIG"+s+" it out");
-						},
-						"DIG": function(){
-							Print_Output("You dig at the pile of dirt with your bare hands, and there it is the legendary Cock and Ball Greatsword, "+sh+"TAKE"+s+" it?");
-						},
-						"TAKE": function(){
-							Take("Cock and Ball Greatsword");
-							player.sword+= 1;
-						},
-						"LEAVE": function(){
-							Move(" back to the gats of UNNAMED", 0)
-						}
-					}
 				}
 			],
 		};
