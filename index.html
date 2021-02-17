@@ -502,8 +502,6 @@
 			var chance = Math.floor( Math.random() * chance );
 			if (chance == 0){
 				Print_Output( s12+"As you attempt to go about your business, you are stopped by some rather rough looking thugs."+s );
-				if ( player.sword = 1 ){
-  				player.sword-=1;
   			if (Check_Cbs("You fought off the dirty bandits with the legendary cock and ball greatsword. (You couldn't even lift it but as soon as you started to draw it, they ran)"));
  				 }else{
 				if ( player.gold ){
@@ -514,11 +512,10 @@
     		if (!Check_Death( "You have been murdered by bandits.")){
       		Print_Output( "Dusting yourself off after the bandits leave, you find you have "+s14+player.gold+s+" gold remaining.");
 					}else{
- 					 Print_Output("The bandits pat you down for gold but find nothing. They shove you out of the way and disappear back into the shadows.");
-						}
+ 					 Print_Output("The bandits pat you down for gold but find nothing. They shove you out of the way and disappear back into the shadows.");}
 						}else{
-						Print_Output( s8+"You have the sensation of being watched by unsavory characters, but they decide not to bother you."+s );
-						}
+							Print_Output( s8+"You have the sensation of being watched by unsavory characters, but they decide not to bother you."+s );
+							}
 		
 		function Check_Death( cause ){
 			if (player.health <= 0){
