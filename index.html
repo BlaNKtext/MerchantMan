@@ -502,8 +502,7 @@
 			var chance = Math.floor( Math.random() * chance );
 			if (chance == 0){
 				Print_Output( s12+"As you attempt to go about your business, you are stopped by some rather rough looking thugs."+s );
-				if ( player.sword ){
-					(Check_Cbs());
+				if (Check_Cbs());
 					player.health-=2;
 					if (!Check_Death( "You have been murdered by bandits.")){
 						Print_Output( "Dusting yourself off after the bandits leave, you find you have "+s14+player.gold+s+" gold remaining.");
