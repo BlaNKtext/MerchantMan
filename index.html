@@ -502,7 +502,7 @@
 			var chance = Math.floor( Math.random() * chance );
 			if (chance == 0){
 				Print_Output( s12+"As you attempt to go about your business, you are stopped by some rather rough looking thugs."+s );
-  			if (Check_Cbs("You fought off the dirty bandits with the legendary cock and ball greatsword. (You couldn't even lift it but as soon as you started to draw it, they ran)"));
+  			if (Check_Sword());
  				 }else{
 				if ( player.gold ){
     			var amount_stolen = Math.ceil( Math.random()*player.gold );
@@ -526,7 +526,7 @@
 			return false;
 		}
 
-		function Check_Cbs( cause ){
+		function Check_Sword( cause ){
 			if (player.sword <= 1){
 				Print_Output("You faught off the dirty bandits with the legendary cock and ball greatsword. (You couldn't even lift it but as soon as you started to draw it, they ran)");
 				return true;
