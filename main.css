@@ -74,3 +74,40 @@
 		font-weight: normal;
 		text-transform: uppercase;
 	}
+		.title-text{
+		color: white;
+		letter-spacing: 0;
+	}
+	.health-title{
+		color: #E14141;
+	}
+	.used-health{
+		color: #7A213A;
+		letter-spacing: 2;
+	}
+	.health{
+		color: #E14141;
+		letter-spacing: 2;
+	}
+	.color-1{color: #000084} 	/* DARK BLUE 		*/
+	.color-2{color: #008200} 	/* DARK GREEN 	*/
+	.color-3{color: #008284} 	/* DARK CYAN 		*/
+	.color-4{color: #840000} 	/* DARK RED 		*/
+	.color-5{color: #840084} 	/* DARK MAGENTA */
+	.color-6{color: #848200} 	/* DARK YELLOW 	*/
+	.color-7{color: #b4b3b4} 	/* LIGHT GREY 	*/
+	.color-8{color: #727272} 	/* DARK GREY		*/
+	.color-9{color: #4848ff} 	/* BLUE 				*/
+	.color-10{color: #00FF00} /* GREEN 				*/
+	.color-11{color: #00FFFF}	/* CYAN					*/
+	.color-12{color: #FF0000}	/* RED					*/
+	.color-13{color: #FF00FF}	/* MAGENTA			*/
+	.color-14{color: #FFFF00}	/* YELLOW				*/
+	.color-15{color: #FFFFFF}	/* WHITE				*/
+	
+	.room-name{
+		color: #00FFFF;
+	}
+	.room-desc{
+		color: #C6C3C6;
+	}
