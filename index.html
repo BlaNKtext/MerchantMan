@@ -11,16 +11,11 @@
 <!-- GAME FUNCTIONALITY -->
 <script>
 	(function(){
-		//======================================
-		// ELEMENTS
-		//======================================
 		var el = {};
 			el.send = document.getElementById("user-send");
 			el.input = document.getElementById("user-input");
 			el.output = document.getElementById("output");
-		//======================================
-		// SHORTCUTS
-		//======================================
+		// Custom color shortcuts
 		var sh = "<span class='high'>",
 		s1 = "<span class='color-1'>",
 		s2 = "<span class='color-2'>",
@@ -91,7 +86,7 @@
 				},
 				"FUCKING DIES" : function(){
 					player.health = 0
-					Print_Output("Bruh *vine thud* OOF  Oh, Nibb4! *bruuuuuuuuuuuuuuuuuuuuuuuuuh* *dies*");
+					Print_Output("Bruh *vine thud* *dies*");
 					The_End();
 				},
 				"DO I HAVE SWORD" : function(){
@@ -172,7 +167,7 @@
 						},
 						"CARL" : function(){
 							//move the player to Carl's back room
-							Print_Output("Carl invites you into the back room.");
+							Print_Output("Carl invites you into the back room, to inspect his wares");
 							Move("in", 3);
 						}
 					}
